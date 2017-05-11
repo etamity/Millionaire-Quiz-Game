@@ -1,0 +1,14 @@
+.ModalBox-container {
+  border: 3px solid #ecf0f1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 6px 20px 1px rgba(0,0,0,0.5);
+}

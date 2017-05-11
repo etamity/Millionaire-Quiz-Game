@@ -1,0 +1,22 @@
+.HomeView-container {
+  margin: 10px;
+}
+
+.HomeView-button {
+  width: 100px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.HomeView-buttons-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 40px;
+}
+
+.HomeView-header {
+  color: #f39c12;
+  display: flex;
+  flex-direction: column;
+}
