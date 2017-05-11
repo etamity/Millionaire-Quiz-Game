@@ -26,7 +26,7 @@ This is sample question structure:
 #### Random Picked Questions
 Please go to : `src/route/Home/modules/QuizReducer.js`
 
-You will see initial state defined at `line 106`
+You will see initial state defined at `line 110`
 
     const initialState = {
 	  questions: [],
@@ -36,9 +36,9 @@ You will see initial state defined at `line 106`
 	}
 Default show 10 random questions from library, please change `showNumOfQuiz` to what you want.
 
-### Testing
+### Install Dependencies
 
-    yarn test
+    yarn install
 
 ### Start the server
 
@@ -46,5 +46,9 @@ This command serves the app at `http://localhost:3000` and provides basic URL
 routing for the app:
 
     yarn start
+
+### Testing
+
+    yarn test
 
 ![enter image description here](https://raw.githubusercontent.com/etamity/Millionaire-Quiz-Game/master/screenshots/screenshot.png)

@@ -36,35 +36,30 @@ export class HomeView extends Component {
     this.props.submitAnswers(e);
     this.props.toggleModalAction(true);
   }
-
-  renderQuziItems() {
+// Render Quiz Cards
+  renderQuziCards() {
       return this.props.questions && this.props.questions.map((item, index)=> {
-        return (
-          <QuizCard key={index}
+        return (<QuizCard key={index}
                     item={item}
                     onChange={this.selectAnswer.bind(this)}
                     selected={this.props.answers && this.props.answers[index] && this.props.answers[index].selected}
-                    showCorrectAnswer={this.props.submited}
-                    ></QuizCard>
-        )
-      })
+                    showCorrectAnswer={this.props.submited}></QuizCard>)
+      });
   }
 
+// Render Header Part
   renderHeader() {
-    return (
-      <div className="HomeView-header">
+    return (<div className="HomeView-header">
           <h4>Welcome!</h4>
           { this.props.quizLibrary ? (<h7>{'Total Questions in Libaray : ' + this.props.quizLibrary.length}</h7>) : null }
           { this.props.questions ? (<h7>{'Random Picked : ' + this.props.questions.length}</h7>) : null }
-      </div>
-    );
+    </div>);
   }
 
   render() {
-    return (
-      <div className="HomeView-container">
+    return (<div className="HomeView-container">
         { this.renderHeader() }
-        { this.renderQuziItems() }
+        { this.renderQuziCards() }
         <div className="HomeView-buttons-group">
           <button className="btn btn-lg btn-success"
                   type="button"
@@ -83,8 +78,7 @@ export class HomeView extends Component {
             })
         }
         </ModalBox>
-      </div>
-    )
+    </div>);
   }
 }
 

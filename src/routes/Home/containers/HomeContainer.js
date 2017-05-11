@@ -7,6 +7,7 @@ import {
   submitAnswersWithRedux,
   toggleModalAction } from '../modules/QuizReducer'
 
+// map dispath function from QuizReducer
 const mapDispatchToProps = {
   fetchData: fetchQuestionsWithRedux,
   selectedAnswer: selectedAnswerAction,
@@ -15,6 +16,7 @@ const mapDispatchToProps = {
   toggleModalAction: toggleModalAction
 }
 
+// map state to props from global state.home
 const mapStateToProps = (state) => ({
   questions: state.home.questions,
   answers: state.home.answers,

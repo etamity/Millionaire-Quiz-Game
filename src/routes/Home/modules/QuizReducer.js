@@ -19,7 +19,7 @@ function validateAnswers(payload) {
     payload
   }
 }
-
+// export dispatch function
 export function fetchQuestionsWithRedux() {
     return (dispatch, state) => {
       if (state.questions) {
@@ -36,6 +36,7 @@ export function fetchQuestionsWithRedux() {
   }
 }
 
+// export dispatch function
 export function selectedAnswerAction(answers) {
     return (dispatch) => {
       dispatch({
@@ -45,6 +46,7 @@ export function selectedAnswerAction(answers) {
     }
 }
 
+// export dispatch function
 export function resetQuizAction() {
     return (dispatch) => {
       dispatch({
@@ -53,6 +55,7 @@ export function resetQuizAction() {
     }
 }
 
+// export dispatch function
 export function submitAnswersWithRedux() {
     return (dispatch, state) => {
       return submitAnswersService().then(([response, json]) =>{
@@ -93,6 +96,7 @@ function buildStatsState(questions, answers) {
   }]
 }
 
+// export dispatch function
 export function toggleModalAction(showed) {
     return (dispatch) => {
       dispatch({
