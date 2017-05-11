@@ -1,4 +1,5 @@
 # Millionaire Quiz Game - React Demo App
+
 ### Introduction
 
 This is a simple React Quiz Game made with React, Redux, and React-Router, all questions sample data are from internet.
@@ -45,3 +46,5 @@ This command serves the app at `http://localhost:3000` and provides basic URL
 routing for the app:
 
     yarn start
+
+![enter image description here](https://raw.githubusercontent.com/etamity/Millionaire-Quiz-Game/master/screenshots/screenshot.png)
