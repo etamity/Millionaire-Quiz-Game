@@ -69,6 +69,7 @@ export class HomeView extends Component {
                   type="button"
                   onClick={ this.props.resetQuizAction }>Random</button>
         </div>
+        { this.props.error ? (<h6 className="HomeView-error">this.props.error</h6>) : null}
         <ModalBox title="Your Status:" opened={ this.props.isModalOpened } onCloseClick={ this.closeModal.bind(this) }>
         {
             this.props.stats && Object.keys(this.props.stats).map((key, index) => {

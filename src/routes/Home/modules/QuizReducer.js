@@ -7,9 +7,10 @@ function fetchSuccess(payload) {
   }
 }
 
-function fetchError() {
+function fetchError(error) {
   return {
-    type: 'FETCH_ERROR'
+    type: 'FETCH_ERROR',
+    payload: error
   }
 }
 
@@ -63,7 +64,7 @@ export function submitAnswersWithRedux() {
           dispatch(validateAnswers(json))
         }
         else{
-          dispatch(fetchError())
+          dispatch(fetchError(response.error))
         }
       })
   }
@@ -111,14 +112,15 @@ const initialState = {
   questions: [],
   answers: [],
   submited: false,
-  showNumOfQuiz: 10
+  showNumOfQuiz: 10,
+  error: null
 }
 
 export default function (state = initialState, action) {
   switch (action.type) {
     case 'FETCH_SUCCESS':
       let quiz = randomPickQuestions(action.payload, state.showNumOfQuiz);
-      return {...state, ...quiz, quizLibrary: action.payload};
+      return {...state, ...quiz, quizLibrary: action.payload, error: null};
 
     case 'SELECTED_ANSWER_ACTION':
       let index = state.answers.findIndex(item => item.id === action.payload.id) || 0;
@@ -137,6 +139,8 @@ export default function (state = initialState, action) {
     case 'TOGGLE_MODAL_ACTION':
       return {...state, isModalOpened: action.payload};
 
+    case 'FETCH_ERROR':
+      return {...state, error:action.payload}
     default:
       return state;
   }

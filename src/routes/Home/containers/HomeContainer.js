@@ -23,7 +23,8 @@ const mapStateToProps = (state) => ({
   submited: state.home.submited,
   stats: state.home.stats,
   isModalOpened: state.home.isModalOpened,
-  quizLibrary: state.home.quizLibrary
+  quizLibrary: state.home.quizLibrary,
+  error: state.home.error
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeView)
